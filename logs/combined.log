@@ -180,3 +180,57 @@
 2025-03-23 22:45:07 info: User updated: 67e0101092303314db102318
 2025-03-23 22:48:33 info: Server is running on port 3000
 2025-03-23 22:48:33 info: MongoDB connection SUCCESS :)
+2025-03-23 22:48:46 info: Server is running on port 3000
+2025-03-23 22:48:46 info: MongoDB connection SUCCESS :)
+2025-03-23 22:53:49 info: POST /api/posts/create
+2025-03-23 22:53:49 info: New post created: 67e090fd597f888397b0b201 by user 67e0125292303314db102331
+2025-03-23 22:53:49 info: Post created: {"message":"Post created","postId":"67e090fd597f888397b0b201"}
+2025-03-23 22:53:52 info: GET /api/posts
+2025-03-23 22:53:52 debug: Retrieved 20 posts
+2025-03-23 22:53:52 info: Retrieved 20 posts
+2025-03-23 22:53:54 info: GET /api/posts/user/67e0125292303314db102331
+2025-03-23 22:53:54 debug: Retrieved 9 posts for user 67e0125292303314db102331
+2025-03-23 22:53:54 info: Retrieved 9 posts for user 67e0125292303314db102331
+2025-03-23 22:53:57 info: GET /api/posts/67e013bc92303314db102358
+2025-03-23 22:53:57 warn: Post not found with ID: 67e013bc92303314db102358
+2025-03-23 22:53:57 error: Error in getPostById: Post not found
+2025-03-23 22:53:57 error: Error retrieving post 67e013bc92303314db102358: Post not found
+2025-03-23 22:54:16 info: POST /api/users/login
+2025-03-23 22:54:16 debug: login attempt for: k@gmail.com
+2025-03-23 22:54:16 info: Login successful for user: 67e0125292303314db102331
+2025-03-23 22:54:16 debug: Generated token for user: 67e0125292303314db102331
+2025-03-23 22:54:16 info: User logged in: 67e0125292303314db102331
+2025-03-23 22:54:26 info: GET /api/posts/user/67e0125292303314db102331
+2025-03-23 22:54:26 debug: Retrieved 9 posts for user 67e0125292303314db102331
+2025-03-23 22:54:26 info: Retrieved 9 posts for user 67e0125292303314db102331
+2025-03-23 22:54:29 info: GET /api/posts/67e013bc92303314db102358
+2025-03-23 22:54:29 warn: Post not found with ID: 67e013bc92303314db102358
+2025-03-23 22:54:29 error: Error in getPostById: Post not found
+2025-03-23 22:54:29 error: Error retrieving post 67e013bc92303314db102358: Post not found
+2025-03-23 22:54:42 info: GET /api/posts/67e016ab92303314db102377
+2025-03-23 22:54:42 debug: Retrieved post: 67e016ab92303314db102377
+2025-03-23 22:54:42 info: Retrieved post: 67e016ab92303314db102377
+2025-03-23 22:54:46 info: PUT /api/posts/67e013bc92303314db102358
+2025-03-23 22:54:46 error: Validation error: [{"type":"field","msg":"Title is required","path":"title","location":"body"},{"type":"field","msg":"Title must be between 3 and 100 characters","path":"title","location":"body"},{"type":"field","msg":"Tags must be an array","path":"tags","location":"body"},{"type":"field","msg":"At least one tag is required","path":"tags","location":"body"}]
+2025-03-23 22:54:48 info: DELETE /api/posts/67e013bc92303314db102358
+2025-03-23 22:54:48 warn: Deletion attempted on non-existent post: 67e013bc92303314db102358
+2025-03-23 22:54:48 error: Error in deletePost: Post not found
+2025-03-23 22:54:48 error: Error deleting post 67e013bc92303314db102358: Post not found
+2025-03-23 22:54:55 info: GET /api/posts/tag/spor
+2025-03-23 22:54:55 debug: Retrieved 2 posts with tag: spor
+2025-03-23 22:54:55 info: Retrieved 2 posts with tag spor
+2025-03-23 22:54:59 info: GET /api/users/
+2025-03-23 22:54:59 info: Retrieved 4 users
+2025-03-23 22:55:01 info: PUT /api/users/67e0101092303314db102318
+2025-03-23 22:55:01 info: User updated: 67e0101092303314db102318
+2025-03-23 22:55:03 info: DELETE /api/users/67e00b50b52f4f591eee5002
+2025-03-23 22:55:06 info: GET /api/users/67e0101092303314db102318
+2025-03-23 22:55:06 info: Retrieved user: 67e0101092303314db102318
+2025-03-23 22:55:08 info: POST /api/users/login
+2025-03-23 22:55:08 debug: login attempt for: k@gmail.com
+2025-03-23 22:55:09 info: Login successful for user: 67e0125292303314db102331
+2025-03-23 22:55:09 debug: Generated token for user: 67e0125292303314db102331
+2025-03-23 22:55:09 info: User logged in: 67e0125292303314db102331
+2025-03-23 22:55:11 info: POST /api/users/register
+2025-03-23 22:55:11 error: Error in registerUser: This email already exists
+2025-03-23 22:55:11 error: Error registering user: This email already exists

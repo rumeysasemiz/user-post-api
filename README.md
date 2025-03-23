@@ -228,8 +228,8 @@ Bu proje, API endpointlerinin test edilmesi için Postman koleksiyonları içerm
 1. [Postman](https://www.postman.com/downloads/) uygulamasını indirin ve yükleyin
 2. Postman'de "Import" butonuna tıklayın
 3. `postman_collections` klasöründeki JSON dosyalarını seçin:
-   - `postman_user api.json`: Kullanıcı işlemleri için API koleksiyonu
-   - `postman_post api.json`: Gönderi işlemleri için API koleksiyonu
+   - `postman_user_api.json`: Kullanıcı işlemleri için API koleksiyonu
+   - `postman_post_api.json`: Gönderi işlemleri için API koleksiyonu
 
 ### Test Adımları
 
