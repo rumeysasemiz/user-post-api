@@ -1,0 +1,12 @@
+2025-03-23 21:25:45 error: Unhandled error: logger is not defined
+2025-03-23 21:25:48 error: Unhandled error: logger is not defined
+2025-03-23 21:25:49 error: Unhandled error: logger is not defined
+2025-03-23 21:26:28 error: Unhandled error: logger is not defined
+2025-03-23 21:26:50 error: Error deleting post 67e013bc92303314db102358: Post not found
+2025-03-23 21:29:12 error: Error logging in user: logger is not defined
+2025-03-23 21:29:54 error: Error logging in user: logger is not defined
+2025-03-23 21:38:11 error: Error in registerUser: This email already exists
+2025-03-23 21:38:11 error: Error registering user: This email already exists
+2025-03-23 21:38:13 error: Error retrieving posts by user 67e0125292303314db102331: logger is not defined
+2025-03-23 21:38:18 error: Error retrieving posts by user 67e0125292303314db102331: logger is not defined
+2025-03-23 21:38:21 error: Error retrieving post 67e013bc92303314db102358: logger is not defined
