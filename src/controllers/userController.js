@@ -31,7 +31,7 @@ const getAllUsers = async (req, res) => {
         res.status(200).json(users);
     } catch (error) {
         logger.error(`Error retrieving all users: ${error.message}`);
-        res.status(500).json({ message: error.message });// neden 500 hatası aldıgım araştır 
+        res.status(500).json({ message: error.message });
 
     }
 };

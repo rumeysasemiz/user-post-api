@@ -153,3 +153,22 @@
 2025-03-23 21:39:29 info: GET /api/posts/tag/spor
 2025-03-23 21:39:29 debug: Retrieved 1 posts with tag: spor
 2025-03-23 21:39:29 info: Retrieved 1 posts with tag spor
+2025-03-23 21:53:07 info: GET /api/users/
+2025-03-23 21:53:07 info: Retrieved 4 users
+2025-03-23 21:57:55 info: POST /api/users/login
+2025-03-23 21:57:55 debug: login attempt for: k@gmail.com
+2025-03-23 21:57:56 info: Login successful for user: 67e0125292303314db102331
+2025-03-23 21:57:56 debug: Generated token for user: 67e0125292303314db102331
+2025-03-23 21:57:56 info: User logged in: 67e0125292303314db102331
+2025-03-23 22:02:43 info: Server is running on port 3000
+2025-03-23 22:02:43 info: MongoDB connection SUCCESS :)
+2025-03-23 22:02:47 info: Server is running on port 3000
+2025-03-23 22:02:47 info: MongoDB connection SUCCESS :)
+2025-03-23 22:02:50 info: Server is running on port 3000
+2025-03-23 22:02:50 info: MongoDB connection SUCCESS :)
+2025-03-23 22:02:53 info: Server is running on port 3000
+2025-03-23 22:02:53 info: MongoDB connection SUCCESS :)
+2025-03-23 22:04:56 info: Server is running on port 3000
+2025-03-23 22:04:56 info: MongoDB connection SUCCESS :)
+2025-03-23 22:06:14 info: Server is running on port 3000
+2025-03-23 22:06:14 info: MongoDB connection SUCCESS :)

@@ -13,12 +13,12 @@ const createPost = async (req, res) => {
         logger.error(`Error creating post: ${error.message}`);
 
         res.status(500).json({ message: error.message });
-        
+
     }
-    
+
 };
 // get all posts 
-const getAllPosts = async (req, res) => { 
+const getAllPosts = async (req, res) => {
     try {
         const posts = await postService.getAllPosts();
         logger.info(`Retrieved ${posts.length} posts`);
@@ -26,8 +26,8 @@ const getAllPosts = async (req, res) => {
         res.status(200).json(posts);
     } catch (error) {
         logger.error(`Error retrieving all posts: ${error.message}`);
-        res.status(500).json({ message: error.message });   
-        
+        res.status(500).json({ message: error.message });
+
     }
 };
 const getPostsByUserId = async (req, res) => {
@@ -41,11 +41,11 @@ const getPostsByUserId = async (req, res) => {
     } catch (error) {
         logger.error(`Error retrieving posts by user ${req.params.id}: ${error.message}`);
         res.status(500).json({ message: error.message });
-        
+
     }
-    
+
 };
-const getPostsByTag = async (req, res) => { 
+const getPostsByTag = async (req, res) => {
     try {
         const tag = req.params.tag;
         const posts = await postService.getPostsByTag(tag);
@@ -55,10 +55,10 @@ const getPostsByTag = async (req, res) => {
     } catch (error) {
         logger.error(`Error retrieving posts by tag ${req.params.tag}: ${error.message}`);
         res.status(500).json({ message: error.message });
-        
+
     }
 };
-const getPostById = async (req, res) => { 
+const getPostById = async (req, res) => {
     try {
         const postId = req.params.id;
         const post = await postService.getPostById(postId);
@@ -67,17 +67,17 @@ const getPostById = async (req, res) => {
         res.status(200).json(post);
     } catch (error) {
         logger.error(`Error retrieving post ${req.params.id}: ${error.message}`);
-        if(error.message==="Post not found"){
+        if (error.message === "Post not found") {
             res.status(404).json({ message: error.message });
         }
         else {
             res.status(500).json({ message: error.message });
 
         }
-        
+
     }
 };
-const updatedPost = async (req, res) => { 
+const updatedPost = async (req, res) => {
     try {
         const postId = req.params.id;
         const userId = req.user.id;
@@ -106,9 +106,8 @@ const deletePost = async (req, res) => {
         const userId = req.user.id;
         const deletedPost = await postService.deletePost(postId, userId);
         logger.info(`Post deleted: ${postId} by user ${userId}`);
-
         res.status(200).json({ message: "Post deleted" });
-        
+
     } catch (error) {
         logger.error(`Error deleting post ${req.params.id}: ${error.message}`);
         if (error.message === "post not found") {
@@ -117,21 +116,15 @@ const deletePost = async (req, res) => {
             res.status(403).json({ message: error.message });
         } else {
             res.status(500).json({ message: error.message });
-
-         }
-
-        
-        
-        
+        }
     }
- };
+};
 module.exports = {
     createPost,
     getAllPosts,
     getPostsByUserId,
     getPostsByTag,
-    getPostById,    
-
+    getPostById,
     updatedPost,
     deletePost,
 };
