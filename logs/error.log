@@ -10,3 +10,7 @@
 2025-03-23 21:38:13 error: Error retrieving posts by user 67e0125292303314db102331: logger is not defined
 2025-03-23 21:38:18 error: Error retrieving posts by user 67e0125292303314db102331: logger is not defined
 2025-03-23 21:38:21 error: Error retrieving post 67e013bc92303314db102358: logger is not defined
+2025-03-23 21:39:19 error: Error in getPostById: Post not found
+2025-03-23 21:39:19 error: Error retrieving post 67e013bc92303314db102358: Post not found
+2025-03-23 21:39:26 error: Error in deletePost: Post not found
+2025-03-23 21:39:26 error: Error deleting post 67e013bc92303314db102358: Post not found
