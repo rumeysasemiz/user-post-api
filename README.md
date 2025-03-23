@@ -216,7 +216,43 @@ nodejs-case/
 | **Logları görüntüle**                    | `docker-compose logs api`                 |
 | **Konteyner shell erişimi**              | `docker-compose exec api sh`              |
 
+## 🧪 API Test Koleksiyonları
 
+Bu proje, API endpointlerinin test edilmesi için Postman koleksiyonları içermektedir. Bu koleksiyonlar sayesinde, tüm API fonksiyonlarını kolayca test edebilirsiniz.
+
+### Postman Koleksiyonlarını Kullanma
+
+1. [Postman](https://www.postman.com/downloads/) uygulamasını indirin ve yükleyin
+2. Postman'de "Import" butonuna tıklayın
+3. `postman_collections` klasöründeki JSON dosyalarını seçin:
+   - `postman_user api.json`: Kullanıcı işlemleri için API koleksiyonu
+   - `postman_post api.json`: Gönderi işlemleri için API koleksiyonu
+
+### Test Adımları
+
+API'yi test etmek için aşağıdaki tipik akışı takip edebilirsiniz:
+
+1. **Kullanıcı İşlemleri**:
+   - `kayıt` endpoint'i ile yeni bir kullanıcı kaydı oluşturun
+   - `giris` endpoint'i ile kullanıcı girişi yaparak JWT token alın
+   - Aldığınız token'ı diğer isteklerde Bearer Token olarak kullanın
+   - `get all user` endpoint'i ile kullanıcı listesini görüntüleyin
+   - `getUser by id` endpoint'i ile belirli bir kullanıcıyı ID ile alın
+   - `update user` endpoint'i ile kullanıcı bilgilerini güncelleyin
+
+2. **Gönderi İşlemleri**:
+   - `create post` endpoint'i ile yeni bir gönderi oluşturun (token gereklidir)
+   - `all posts` endpoint'i ile tüm gönderileri listeleyin
+   - `get list by user` endpoint'i ile belirli bir kullanıcıya ait gönderileri alın
+   - `get list by tag` endpoint'i ile etiketlere göre filtreleme yapın
+   - `update post` endpoint'i ile gönderi güncelleyin (sadece gönderi sahibi)
+   - `delete post` endpoint'i ile gönderi silin (sadece gönderi sahibi)
+
+### Önemli Notlar
+
+- Kimlik doğrulaması gerektiren endpointler için, önce login işlemi yapıp token almanız gerekir
+- Aldığınız token'ı "Authorization" sekmesindeki "Bearer Token" alanına girmelisiniz
+- Test verilerinizi kendi ortamınıza göre değiştirmeniz gerekebilir (örneğin: kullanıcı ID'leri)
 
 ## 📄 Lisans
 

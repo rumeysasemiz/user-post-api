@@ -129,10 +129,7 @@ const deletePost = async (postId, userId) => {
             logger.warn(`Deletion attempted on non-existent post: ${postId}`);
             throw new Error("Post not found");
         }
-        if (!post) {
-            logger.warn(`Deletion attempted on non-existent post: ${postId}`);
-            throw new Error("Post not found");
-        }
+      
         await Post.findByIdAndDelete(postId);
         logger.info(`Post deleted: ${postId} by user ${userId}`);
 
