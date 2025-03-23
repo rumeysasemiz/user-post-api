@@ -197,6 +197,9 @@ nodejs-case/
 │   ├── utils/        # Logger ve yardımcı fonksiyonlar
 │   └── server.js     # Ana uygulama başlangıç noktası
 ├── logs/             # Winston log dosyaları
+├── postman_collections/ # Postman API test koleksiyonları
+│   ├── postman_user_api.json  # Kullanıcı API koleksiyonu
+│   └── postman_post_api.json  # Post API koleksiyonu
 ├── .dockerignore
 ├── .env
 ├── docker-compose.yml

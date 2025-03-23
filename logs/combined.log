@@ -176,3 +176,7 @@
 2025-03-23 22:26:57 info: MongoDB connection SUCCESS :)
 2025-03-23 22:34:10 info: Server is running on port 3000
 2025-03-23 22:34:10 info: MongoDB connection SUCCESS :)
+2025-03-23 22:45:07 info: PUT /api/users/67e0101092303314db102318
+2025-03-23 22:45:07 info: User updated: 67e0101092303314db102318
+2025-03-23 22:48:33 info: Server is running on port 3000
+2025-03-23 22:48:33 info: MongoDB connection SUCCESS :)
