@@ -1,12 +1,12 @@
 # Node.js Rest API with MongoDB ve Docker
 
-Node.js, Express, MongoDB ve Docker kullanarak oluşturulmuş bir blog gönderisi ve kullanıcı yönetimi RESTful API'si. Bu proje, kullanıcı kaydı, kimlik doğrulama, yetkilendirme ve gönderi yönetimini profesyonel loglama ve veri doğrulama özellikleriyle birlikte sunar.
+Node.js, Express, MongoDB ve Docker kullanarak oluşturulmuş bir blog gönderisi ve kullanıcı yönetimi RESTful API'si. Bu proje, kullanıcı kaydı, kimlik doğrulama ve gönderi yönetimini profesyonel loglama ve veri doğrulama özellikleriyle birlikte sunar.
 
 ## 📋 Özellikler
 
 | Özellik               | Açıklama                                                                 |
 |-----------------------|---------------------------------------------------------------------------|
-| **Kullanıcı Yönetimi** | Yeni kullanıcı kaydı, JWT ile kimlik doğrulama, kullanıcı profillerini görüntüleme/güncelleme/silme, rol tabanlı izinler (kullanıcı/yönetici) |
+| **Kullanıcı Yönetimi** | Yeni kullanıcı kaydı, JWT ile kimlik doğrulama, kullanıcı profillerini görüntüleme/güncelleme/silme |
 | **Gönderi Yönetimi**  | Blog gönderisi oluşturma, okuma, güncelleme ve silme, gönderileri kullanıcıya/tags'e göre filtreleme, gönderi düzenleme/silme için yetkilendirme kontrolleri |
 | **Veri Doğrulama**    | Express-validator ile kullanıcı girişi ve gönderi doğrulama, hata mesajları standardizasyonu |
 | **Profesyonel Loglama** | Winston ile yapılandırılmış loglama, dosya ve konsol logları, hata izleme ve debug desteği |
@@ -41,8 +41,7 @@ Node.js, Express, MongoDB ve Docker kullanarak oluşturulmuş bir blog gönderis
 1. **Depoyu klonlayın**
 
 ```bash
-git clone <repository-url>
-cd nodejs-case
+git clone https://github.com/rumeysa111/nodejs-user-post-api.git
 ```
 
 2. **Docker ile Çalıştırma**
@@ -183,7 +182,6 @@ Bu API, aşağıdaki güvenlik özelliklerini içerir:
 - **Veri Doğrulama**: Express-validator ile kullanıcı girdilerinin doğrulanması
 - **Hata İşleme**: Güvenli ve standartlaştırılmış hata mesajları
 
-## 🐳 Docker Bilgisi
 
 ### Proje Yapısı
 
@@ -207,7 +205,7 @@ nodejs-case/
 └── README.md
 ```
 
-### Docker Komutları
+## 🐳 Docker Bilgisi
 
 | Komut                                     | Açıklama                                   |
 |-------------------------------------------|-------------------------------------------|
