@@ -181,7 +181,6 @@ Bu API, aşağıdaki güvenlik özelliklerini içerir:
 - **Şifre Hashleme**: Bcrypt ile güvenli şifre depolama
 - **JWT Doğrulama**: Güvenli API erişimi için JWT tabanlı kimlik doğrulama
 - **Veri Doğrulama**: Express-validator ile kullanıcı girdilerinin doğrulanması
-- **Rol Tabanlı Erişim Kontrolü**: Kullanıcı ve admin rolleri
 - **Hata İşleme**: Güvenli ve standartlaştırılmış hata mesajları
 
 ## 🐳 Docker Bilgisi
@@ -219,21 +218,7 @@ nodejs-case/
 | **Logları görüntüle**                    | `docker-compose logs api`                 |
 | **Konteyner shell erişimi**              | `docker-compose exec api sh`              |
 
-## 📝 Gelecek Geliştirmeler
 
-Projede aşağıdaki geliştirmeleri yapmayı planlıyoruz:
-
-- **HTTP Güvenlik Başlıkları**: Helmet middleware'i ekleyerek güvenliğin artırılması
-- **Gelişmiş Veri Doğrulama**: Şema doğrulaması için Joi kütüphanesinin entegrasyonu
-- **Pagination**: Büyük veri kümeleri için sayfalama desteği
-- **API Rate Limiting**: İstek sınırlama için middleware eklenmesi
-- **Kullanıcı Rollerine Göre İçerik Filtreleme**: Admin/kullanıcı rolleri için gelişmiş yetkilendirme
-
-## 🧪 Geliştirme İpuçları
-
-- **Loglama Kullanımı**: `const logger = require('../utils/logger');` ile her dosyada loglama yapabilirsiniz
-- **Doğrulama Ekleme**: Yeni route'lar için validator.js içinde doğrulama kuralları tanımlayabilirsiniz
-- **Yerel Geliştirme**: `npm run dev` komutu ile nodemon kullanarak yerel geliştirme yapabilirsiniz
 
 ## 📄 Lisans
 
