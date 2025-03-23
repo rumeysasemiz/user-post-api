@@ -1,6 +1,8 @@
 const User = require("../models/userModel");
+const Post = require("../models/postModel");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
+const { default: mongoose } = require("mongoose");
 //const joi = require("joi"); joiyi araştır kullanmam gerkeilyor mu kullanmamam gerekiyrı mu
 
 const registerUser = async (username, email, password, role) => {
@@ -106,13 +108,20 @@ const updateUser = async (userId, updateData) => {
 };
 const deleteUser = async (userId) => {
     try {
+        // Önce kullanıcıyı bul ve sil
         const user = await User.findByIdAndDelete(userId);
         if (!user) throw new Error("User not found");
-        return user;
+        
+        // Kullanıcıya ait tüm postları sil
+        const deletedPosts = await Post.deleteMany({ userId: userId });
+        
+        return {
+            user: user,
+            deletedPostsCount: deletedPosts.deletedCount
+        };
     } catch (error) {
         console.log("error:", error);
         throw new Error(error.message);
-        
     }
 };
 

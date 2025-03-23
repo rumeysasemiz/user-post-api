@@ -116,5 +116,5 @@ module.exports = {
     getPostById,    
 
     updatedPost,
-    deletePost
+    deletePost,
 };

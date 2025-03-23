@@ -15,10 +15,15 @@ services:
       - "3000:3000"
     volumes:
       - .:/app  
+      - /app/node_modules
     environment:
       PORT: 3000
       MONGO_URI: mongodb://mongo_db:27017/nodejs-case
       JWT_SECRET: 2003Rumeysa
+      CHOKIDAR_USEPOLLING: "true"
+      NODE_ENV: development
+
+    command: npm run dev
 
     depends_on:
       - mongo_db  

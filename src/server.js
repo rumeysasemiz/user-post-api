@@ -14,7 +14,7 @@ app.use(cors()); //cors middleware
 connectDB(); //mongodb bağlantısı
 
 app.get("/", (req, res) => {
-    res.send("Server is running");
+    res.send("Server is vgffg running ");
 });
 app.get("/api", (req, res) => {
     res.send("API is running");
