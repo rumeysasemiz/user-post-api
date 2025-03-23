@@ -75,7 +75,7 @@ const deleteUser = async (req, res) => {
         await userService.deleteUser(userId);
         res.status(200).json({ message: "User deleted" });
 
-    }catch(error){
+    } catch (error) {
         console.log("error:", error.message);
         if (error.message === "User not found") {
             res.status(404).json({ message: error.message });
@@ -83,12 +83,13 @@ const deleteUser = async (req, res) => {
             res.status(500).json({ message: error.message });
         }
     }
- };
-    module.exports = {
-        registerUser,
-        loginUser,
-        getAllUsers,
-        getUserById,
-        updateUser,
-        deleteUser
-    };
+};
+
+module.exports = {
+    registerUser,
+    loginUser,
+    getAllUsers,
+    getUserById,
+    updateUser,
+    deleteUser
+};
