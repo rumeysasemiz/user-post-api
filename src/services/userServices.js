@@ -1,6 +1,6 @@
 const User = require("../models/userModel");
 const jwt = require("jsonwebtoken");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 //const joi = require("joi"); joiyi araştır kullanmam gerkeilyor mu kullanmamam gerekiyrı mu
 
 const registerUser = async (username, email, password, role) => {

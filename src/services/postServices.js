@@ -53,7 +53,7 @@ const getPostById = async (postId) => {
         return post;
     } catch (error) {
         console.log("error:", error);
-        this.throw(new Error(error.message));
+        throw new Error(error.message); 
         
     }
 };
