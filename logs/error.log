@@ -14,3 +14,47 @@
 2025-03-23 21:39:19 error: Error retrieving post 67e013bc92303314db102358: Post not found
 2025-03-23 21:39:26 error: Error in deletePost: Post not found
 2025-03-23 21:39:26 error: Error deleting post 67e013bc92303314db102358: Post not found
+2025-04-25 13:21:01 error: Error in registerUser: media_type_header_exception
+	Caused by:
+		status_exception: Accept version must be either version 8 or 7, but found 9. Accept=application/vnd.elasticsearch+json; compatible-with=9
+	Root causes:
+		media_type_header_exception: Invalid media-type value on headers [Accept, Content-Type]
+2025-04-25 13:21:01 error: Error registering user: media_type_header_exception
+	Caused by:
+		status_exception: Accept version must be either version 8 or 7, but found 9. Accept=application/vnd.elasticsearch+json; compatible-with=9
+	Root causes:
+		media_type_header_exception: Invalid media-type value on headers [Accept, Content-Type]
+2025-04-25 13:21:32 error: Error in registerUser: This email already exists
+2025-04-25 13:21:32 error: Error registering user: This email already exists
+2025-04-25 13:21:56 error: Error in registerUser: media_type_header_exception
+	Caused by:
+		status_exception: Accept version must be either version 8 or 7, but found 9. Accept=application/vnd.elasticsearch+json; compatible-with=9
+	Root causes:
+		media_type_header_exception: Invalid media-type value on headers [Accept, Content-Type]
+2025-04-25 13:21:56 error: Error registering user: media_type_header_exception
+	Caused by:
+		status_exception: Accept version must be either version 8 or 7, but found 9. Accept=application/vnd.elasticsearch+json; compatible-with=9
+	Root causes:
+		media_type_header_exception: Invalid media-type value on headers [Accept, Content-Type]
+2025-04-25 13:22:01 error: Error in registerUser: This email already exists
+2025-04-25 13:22:01 error: Error registering user: This email already exists
+2025-04-25 13:24:21 error: Error in getPostById: Cast to ObjectId failed for value "search" (type string) at path "_id" for model "Post"
+2025-04-25 13:24:21 error: Error retrieving post search: Cast to ObjectId failed for value "search" (type string) at path "_id" for model "Post"
+2025-04-25 13:45:12 error: Error in getPostById: Cast to ObjectId failed for value "search" (type string) at path "_id" for model "Post"
+2025-04-25 13:45:12 error: Error retrieving post search: Cast to ObjectId failed for value "search" (type string) at path "_id" for model "Post"
+2025-04-25 13:45:13 error: Error in getPostById: Cast to ObjectId failed for value "search" (type string) at path "_id" for model "Post"
+2025-04-25 13:45:13 error: Error retrieving post search: Cast to ObjectId failed for value "search" (type string) at path "_id" for model "Post"
+2025-04-25 13:51:34 error: Error in getPostById: Cast to ObjectId failed for value "search" (type string) at path "_id" for model "Post"
+2025-04-25 13:51:34 error: Error retrieving post search: Cast to ObjectId failed for value "search" (type string) at path "_id" for model "Post"
+2025-04-25 13:51:35 error: Error in getPostById: Cast to ObjectId failed for value "search" (type string) at path "_id" for model "Post"
+2025-04-25 13:51:35 error: Error retrieving post search: Cast to ObjectId failed for value "search" (type string) at path "_id" for model "Post"
+2025-04-25 13:51:48 error: Error in getPostById: Cast to ObjectId failed for value "search" (type string) at path "_id" for model "Post"
+2025-04-25 13:51:48 error: Error retrieving post search: Cast to ObjectId failed for value "search" (type string) at path "_id" for model "Post"
+2025-04-25 13:53:07 error: Error in getPostById: Cast to ObjectId failed for value "search" (type string) at path "_id" for model "Post"
+2025-04-25 13:53:07 error: Error retrieving post search: Cast to ObjectId failed for value "search" (type string) at path "_id" for model "Post"
+2025-04-25 13:53:08 error: Error in getPostById: Cast to ObjectId failed for value "search" (type string) at path "_id" for model "Post"
+2025-04-25 13:53:08 error: Error retrieving post search: Cast to ObjectId failed for value "search" (type string) at path "_id" for model "Post"
+2025-04-25 13:53:10 error: Error in getPostById: Cast to ObjectId failed for value "search" (type string) at path "_id" for model "Post"
+2025-04-25 13:53:10 error: Error retrieving post search: Cast to ObjectId failed for value "search" (type string) at path "_id" for model "Post"
+2025-04-25 13:57:46 error: Error in search: postService.searchPosts is not a function
+2025-04-25 13:57:54 error: Error in search: postService.searchPosts is not a function

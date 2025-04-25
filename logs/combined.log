@@ -234,3 +234,96 @@
 2025-03-23 22:55:11 info: POST /api/users/register
 2025-03-23 22:55:11 error: Error in registerUser: This email already exists
 2025-03-23 22:55:11 error: Error registering user: This email already exists
+2025-04-25 12:15:42 info: Server is running on port 3000
+2025-04-25 12:15:42 info: MongoDB connection SUCCESS :)
+2025-04-25 12:22:34 info: Server is running on port 3000
+2025-04-25 12:22:34 info: MongoDB connection SUCCESS :)
+2025-04-25 12:27:22 info: Server is running on port 3000
+2025-04-25 12:27:22 info: MongoDB connection SUCCESS :)
+2025-04-25 13:13:25 info: Server is running on port 3000
+2025-04-25 13:13:26 info: MongoDB connection SUCCESS :)
+2025-04-25 13:18:40 info: Server is running on port 3000
+2025-04-25 13:18:40 info: MongoDB connection SUCCESS :)
+2025-04-25 13:19:07 info: Server is running on port 3000
+2025-04-25 13:19:07 info: MongoDB connection SUCCESS :)
+2025-04-25 13:21:00 info: POST /api/users/register
+2025-04-25 13:21:01 error: Error in registerUser: media_type_header_exception
+	Caused by:
+		status_exception: Accept version must be either version 8 or 7, but found 9. Accept=application/vnd.elasticsearch+json; compatible-with=9
+	Root causes:
+		media_type_header_exception: Invalid media-type value on headers [Accept, Content-Type]
+2025-04-25 13:21:01 error: Error registering user: media_type_header_exception
+	Caused by:
+		status_exception: Accept version must be either version 8 or 7, but found 9. Accept=application/vnd.elasticsearch+json; compatible-with=9
+	Root causes:
+		media_type_header_exception: Invalid media-type value on headers [Accept, Content-Type]
+2025-04-25 13:21:32 info: POST /api/users/register
+2025-04-25 13:21:32 error: Error in registerUser: This email already exists
+2025-04-25 13:21:32 error: Error registering user: This email already exists
+2025-04-25 13:21:56 info: POST /api/users/register
+2025-04-25 13:21:56 error: Error in registerUser: media_type_header_exception
+	Caused by:
+		status_exception: Accept version must be either version 8 or 7, but found 9. Accept=application/vnd.elasticsearch+json; compatible-with=9
+	Root causes:
+		media_type_header_exception: Invalid media-type value on headers [Accept, Content-Type]
+2025-04-25 13:21:56 error: Error registering user: media_type_header_exception
+	Caused by:
+		status_exception: Accept version must be either version 8 or 7, but found 9. Accept=application/vnd.elasticsearch+json; compatible-with=9
+	Root causes:
+		media_type_header_exception: Invalid media-type value on headers [Accept, Content-Type]
+2025-04-25 13:22:01 info: POST /api/users/register
+2025-04-25 13:22:01 error: Error in registerUser: This email already exists
+2025-04-25 13:22:01 error: Error registering user: This email already exists
+2025-04-25 13:22:15 info: GET /api/users
+2025-04-25 13:22:15 info: Retrieved 2 users
+2025-04-25 13:22:42 info: POST /api/users/login
+2025-04-25 13:22:42 debug: login attempt for: semiz@gmail.com
+2025-04-25 13:22:42 info: Login successful for user: 680b8c743d67523cf04eb18d
+2025-04-25 13:22:42 debug: Generated token for user: 680b8c743d67523cf04eb18d
+2025-04-25 13:22:42 info: User logged in: 680b8c743d67523cf04eb18d
+2025-04-25 13:23:24 info: POST /api/posts/create
+2025-04-25 13:23:24 info: New post created: 680b8ccc3d67523cf04eb194 by user 680b8c743d67523cf04eb18d
+2025-04-25 13:23:24 info: Post created: {"message":"Post created","postId":"680b8ccc3d67523cf04eb194"}
+2025-04-25 13:24:21 info: GET /api/posts/search?q=elasticsearch
+2025-04-25 13:24:21 error: Error in getPostById: Cast to ObjectId failed for value "search" (type string) at path "_id" for model "Post"
+2025-04-25 13:24:21 error: Error retrieving post search: Cast to ObjectId failed for value "search" (type string) at path "_id" for model "Post"
+2025-04-25 13:38:45 info: Server is running on port 3000
+2025-04-25 13:38:45 info: MongoDB connection SUCCESS :)
+2025-04-25 13:43:46 info: Server is running on port 3000
+2025-04-25 13:43:46 info: MongoDB connection SUCCESS :)
+2025-04-25 13:45:12 info: GET /api/posts/search?q=elasticsearch
+2025-04-25 13:45:12 error: Error in getPostById: Cast to ObjectId failed for value "search" (type string) at path "_id" for model "Post"
+2025-04-25 13:45:12 error: Error retrieving post search: Cast to ObjectId failed for value "search" (type string) at path "_id" for model "Post"
+2025-04-25 13:45:13 info: GET /api/posts/search?q=elasticsearch
+2025-04-25 13:45:13 error: Error in getPostById: Cast to ObjectId failed for value "search" (type string) at path "_id" for model "Post"
+2025-04-25 13:45:13 error: Error retrieving post search: Cast to ObjectId failed for value "search" (type string) at path "_id" for model "Post"
+2025-04-25 13:50:16 info: Server is running on port 3000
+2025-04-25 13:50:16 info: MongoDB connection SUCCESS :)
+2025-04-25 13:51:34 info: GET /api/posts/search?q=elasticsearch
+2025-04-25 13:51:34 error: Error in getPostById: Cast to ObjectId failed for value "search" (type string) at path "_id" for model "Post"
+2025-04-25 13:51:34 error: Error retrieving post search: Cast to ObjectId failed for value "search" (type string) at path "_id" for model "Post"
+2025-04-25 13:51:35 info: GET /api/posts/search?q=elasticsearch
+2025-04-25 13:51:35 error: Error in getPostById: Cast to ObjectId failed for value "search" (type string) at path "_id" for model "Post"
+2025-04-25 13:51:35 error: Error retrieving post search: Cast to ObjectId failed for value "search" (type string) at path "_id" for model "Post"
+2025-04-25 13:51:44 info: Server is running on port 3000
+2025-04-25 13:51:44 info: MongoDB connection SUCCESS :)
+2025-04-25 13:51:48 info: GET /api/posts/search?q=elasticsearch
+2025-04-25 13:51:48 error: Error in getPostById: Cast to ObjectId failed for value "search" (type string) at path "_id" for model "Post"
+2025-04-25 13:51:48 error: Error retrieving post search: Cast to ObjectId failed for value "search" (type string) at path "_id" for model "Post"
+2025-04-25 13:52:09 info: Server is running on port 3000
+2025-04-25 13:52:09 info: MongoDB connection SUCCESS :)
+2025-04-25 13:53:07 info: GET /api/posts/search?q=elasticsearch
+2025-04-25 13:53:07 error: Error in getPostById: Cast to ObjectId failed for value "search" (type string) at path "_id" for model "Post"
+2025-04-25 13:53:07 error: Error retrieving post search: Cast to ObjectId failed for value "search" (type string) at path "_id" for model "Post"
+2025-04-25 13:53:08 info: GET /api/posts/search?q=elasticsearch
+2025-04-25 13:53:08 error: Error in getPostById: Cast to ObjectId failed for value "search" (type string) at path "_id" for model "Post"
+2025-04-25 13:53:08 error: Error retrieving post search: Cast to ObjectId failed for value "search" (type string) at path "_id" for model "Post"
+2025-04-25 13:53:10 info: GET /api/posts/search?q=elasticsearch
+2025-04-25 13:53:10 error: Error in getPostById: Cast to ObjectId failed for value "search" (type string) at path "_id" for model "Post"
+2025-04-25 13:53:10 error: Error retrieving post search: Cast to ObjectId failed for value "search" (type string) at path "_id" for model "Post"
+2025-04-25 13:57:29 info: Server is running on port 3000
+2025-04-25 13:57:29 info: MongoDB connection SUCCESS :)
+2025-04-25 13:57:46 info: GET /api/posts/search?q=elasticsearch
+2025-04-25 13:57:46 error: Error in search: postService.searchPosts is not a function
+2025-04-25 13:57:54 info: GET /api/posts/search?q=elasticsearch
+2025-04-25 13:57:54 error: Error in search: postService.searchPosts is not a function
