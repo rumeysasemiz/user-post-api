@@ -327,3 +327,23 @@
 2025-04-25 13:57:46 error: Error in search: postService.searchPosts is not a function
 2025-04-25 13:57:54 info: GET /api/posts/search?q=elasticsearch
 2025-04-25 13:57:54 error: Error in search: postService.searchPosts is not a function
+2025-04-28 06:20:21 info: Server is running on port 3000
+2025-04-28 06:20:21 info: MongoDB connection SUCCESS :)
+2025-04-28 06:20:34 info: POST /api/users/register
+2025-04-28 06:20:48 info: New user registered: seemiz, semiz1@gmail.com, user
+2025-04-28 06:20:48 info: User registered: 680f1e32497bb0802dcd3385
+2025-04-28 06:22:31 info: POST /api/posts/create
+2025-04-28 06:22:31 info: New post created: 680f1ea7497bb0802dcd3389 by user 680b8c743d67523cf04eb18d
+2025-04-28 06:22:31 info: Post created: {"message":"Post created","postId":"680f1ea7497bb0802dcd3389"}
+2025-04-28 06:24:07 info: GET /api/posts/search?q=spor
+2025-04-28 06:24:07 info: Search performed with query: spor
+2025-04-28 06:24:49 info: GET /api/posts/search?q=elasticsearch
+2025-04-28 06:24:49 info: Search performed with query: elasticsearch
+2025-04-28 07:56:28 info: GET /api/users
+2025-04-28 07:56:28 info: Retrieved 3 users
+2025-04-28 07:56:44 info: GET /api/users
+2025-04-28 07:56:44 info: Retrieved 3 users
+2025-04-28 07:57:10 info: GET /api/users
+2025-04-28 07:57:10 info: Retrieved 3 users
+2025-04-28 07:58:29 info: GET /api/users
+2025-04-28 07:58:29 info: Retrieved 3 users

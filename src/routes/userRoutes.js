@@ -1,9 +1,9 @@
 const express = require("express");
 const router = express.Router();
-const { registerUser, loginUser,getAllUsers ,getUserById,updateUser,deleteUser,searchUsers} = require("../controllers/userController");
+const { registerUser, loginUser,getAllUsers ,getUserById,updateUser,deleteUser} = require("../controllers/userController");
 const authMiddleware = require("../middlewares/authMiddleware");
 const { userValidator } = require('../middlewares/validator');
-router.get("/search", searchUsers);
+//router.get("/search", searchUsers);
 
 router.get("/", getAllUsers);
 
