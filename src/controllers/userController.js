@@ -15,7 +15,10 @@ const loginUser = async (req, res) => {
     try {
         const result = await userService.loginUser(req.body.email, req.body.password);
         logger.info(`User logged in: ${result.userId}`);
-
+        // Session'a kullanıcı bilgilerini kaydetme
+        req.session.userId = result.userId;
+        req.session.email = req.body.email;
+        
         res.json(result);
     } catch (error) {
         logger.error(`Error logging in user: ${error.message}`);
@@ -100,12 +103,65 @@ const deleteUser = async (req, res) => {
         }
     }
 };
+const logoutUser = async(req, res) => {
+    try {
+        const userId = req.session.userId;
+        // session'dan kullanıcı bilgilerini sil
+        req.session.destroy((err)=>{
+            if(err){
+                logger.error(`Error logging out user ${userId}: ${err.message}`);
+                return res.status(500).json({message:'Internal server error'});
+
+            };
+            logger.info(`User logged out: ${userId}`);
+            res.clearCookie('user_sid'); // cookie'yi temizle
+            res.json({message:'User logged out successfully'}); // kullanıcıyı çıkış yaptık
+        })
+    } catch (error) {
+        logger.error(`Error logging out user ${req.session.userId}: ${error.message}`);
+        res.status(500).json({ message: error.message });
+        
+    }
+ };
+ // session durumunu kontrol etmek için fonksiyon ekleyin 
+const sessionStatus= async(req,res)=>{
+    if(req.session && req.session.userId){
+        try {
+            const user= await userService.getUserById(req.session.userId);
+            res.json({
+                isAuthenticated: true,
+                user: {
+                    id: user._id,
+                    username: user.username,
+                    email: user.email,
+                    role: user.role
+                }
+            });
+        } catch (error) {
+            logger.error(`Error in sessionStatus: ${error.message}`);
+            req.session.destroy();
+            res.status(401).json({
+                isAuthenticated: false,
+                message: "geçersiz oturum",
+            });
+            
+        }
+      
+}else{
+    res.json({
+        isAuthenticated: false,
+        message: "oturum açık değil",
+    });
+}
+};
 
 module.exports = {
     registerUser,
     loginUser,
+    logoutUser,
     getAllUsers,
     getUserById,
     updateUser,
-    deleteUser
+    deleteUser,
+    sessionStatus,
 };

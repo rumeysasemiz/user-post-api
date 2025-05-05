@@ -4,6 +4,15 @@ const User = require("../models/userModel");  // Bu satırı ekleyin
 const logger = require("../utils/logger");
 const createPost = async (title, content, tags, userId) => {
     try {
+                // Cache'i temizle
+                await redisClient.del('all_posts');
+                await redisClient.del(`user_posts:${userId}`);
+        // önce redisten  kontrol ediyoruz
+        const cachedPosts = await redisClient.get("all_posts");
+        if(cachedPosts) {
+            logger.debug("Posts retrieved from Redis cache");
+            return JSON.parse(cachedPosts);
+        }
         // Kullanıcının var olup olmadığını kontrol et
         const user = await User.findById(userId);
         if (!user) {
@@ -89,6 +98,12 @@ const getAllPosts = async () => {
 };
 const getPostsByUserId = async (userId) => {
     try {
+        const cachedPosts = await redisClient.get(`user_posts:${userId}`);
+        if(cachedPosts){
+            logger.info(`Retrieved posts for user ${userId} from Redis cache`);
+            return JSON.parse(cachedPosts);
+        }
+
         // öncce kullanıcı var mı onu kontrol ediyoruz 
         const user = await User.findById(userId);
         if (!user) {
@@ -110,7 +125,8 @@ const getPostsByUserId = async (userId) => {
         }
     });
     logger.debug(`Retrieved ${posts.length} posts for user: ${userId} from MongoDB and ${elasticPosts.hits.hits.length} from Elasticsearch`);
-
+      // Redis'e cache'le
+        await redisClient.set(`user_posts:${userId}`, JSON.stringify(posts), 'EX', 3600);
         return posts;
     } catch (error) {
         logger.error(`Error in getPostsByUserId: ${error.message}`);
@@ -145,6 +161,11 @@ const getPostsByTag = async (tag) => {
 };
 const getPostById = async (postId) => {
     try {
+        const cachedPost = await redisClient.get(`post_${postId}`);
+        if (cachedPost) {
+            logger.debug(`Post retrieved from Redis cache: ${postId}`);
+            return JSON.parse(cachedPost);
+        }
         // MongoDB'den postu getir
         const post = await Post.findById(postId).populate("userId", "username email");
         
@@ -160,7 +181,8 @@ const getPostById = async (postId) => {
                 throw new Error("Post not found");
             }
         }
-
+       // Sonucu Redis'e 1 saat için cache'le
+       await redisClient.set(`post:${postId}`, JSON.stringify(post), 'EX', 3600);
         logger.debug(`Retrieved post: ${postId}`);
         return post;
     } catch (error) {
@@ -171,6 +193,10 @@ const getPostById = async (postId) => {
 
 const updatePost = async (postId, userId, updateData) => {
     try {
+                // Cache'i temizle
+                await redisClient.del(`post:${postId}`);
+                await redisClient.del('all_posts');
+                await redisClient.del(`user_posts:${userId}`);
         // Önce kullanıcının var olup olmadığını kontrol et
         const user = await User.findById(userId);
         if (!user) {
@@ -215,6 +241,10 @@ const updatePost = async (postId, userId, updateData) => {
 };
 const deletePost = async (postId, userId) => {
     try {
+                // Cache'i temizle
+                await redisClient.del(`post:${postId}`);
+                await redisClient.del('all_posts');
+                await redisClient.del(`user_posts:${userId}`);
            // Önce kullanıcının var olup olmadığını kontrol et
            const user = await User.findById(userId);
            if (!user) {

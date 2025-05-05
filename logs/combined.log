@@ -347,3 +347,60 @@
 2025-04-28 07:57:10 info: Retrieved 3 users
 2025-04-28 07:58:29 info: GET /api/users
 2025-04-28 07:58:29 info: Retrieved 3 users
+2025-05-05 17:10:04 info: Server is running on port 3000
+2025-05-05 17:10:04 error: Redis connection FAIL :( connect ECONNREFUSED 127.0.0.1:6379
+2025-05-05 17:10:04 error: Redis connection FAIL :( connect ECONNREFUSED 127.0.0.1:6379
+2025-05-05 17:10:04 error: Redis connection FAIL :( connect ECONNREFUSED 127.0.0.1:6379
+2025-05-05 17:10:04 error: Redis connection FAIL :( connect ECONNREFUSED 127.0.0.1:6379
+2025-05-05 17:10:04 error: Redis connection FAIL :( connect ECONNREFUSED 127.0.0.1:6379
+2025-05-05 17:10:05 error: Redis connection FAIL :( connect ECONNREFUSED 127.0.0.1:6379
+2025-05-05 17:10:05 error: Redis connection FAIL :( connect ECONNREFUSED 127.0.0.1:6379
+2025-05-05 17:10:05 error: Redis connection FAIL :( connect ECONNREFUSED 127.0.0.1:6379
+2025-05-05 17:10:06 error: Redis connection FAIL :( connect ECONNREFUSED 127.0.0.1:6379
+2025-05-05 17:10:06 error: Redis connection FAIL :( connect ECONNREFUSED 127.0.0.1:6379
+2025-05-05 17:10:07 error: Redis connection FAIL :( connect ECONNREFUSED 127.0.0.1:6379
+2025-05-05 17:10:07 error: Redis connection FAIL :( connect ECONNREFUSED 127.0.0.1:6379
+2025-05-05 17:10:08 error: Redis connection FAIL :( connect ECONNREFUSED 127.0.0.1:6379
+2025-05-05 17:10:09 error: Redis connection FAIL :( connect ECONNREFUSED 127.0.0.1:6379
+2025-05-05 17:10:09 error: Redis connection FAIL :( connect ECONNREFUSED 127.0.0.1:6379
+2025-05-05 17:10:10 error: Redis connection FAIL :( connect ECONNREFUSED 127.0.0.1:6379
+2025-05-05 17:10:11 error: Redis connection FAIL :( connect ECONNREFUSED 127.0.0.1:6379
+2025-05-05 17:10:12 error: Redis connection FAIL :( connect ECONNREFUSED 127.0.0.1:6379
+2025-05-05 17:10:13 error: Redis connection FAIL :( connect ECONNREFUSED 127.0.0.1:6379
+2025-05-05 17:10:14 error: Redis connection FAIL :( connect ECONNREFUSED 127.0.0.1:6379
+2025-05-05 17:10:15 error: Redis connection FAIL :( connect ECONNREFUSED 127.0.0.1:6379
+2025-05-05 14:23:59 info: Server is running on port 3000
+2025-05-05 14:23:59 error: Redis connection FAIL :( connect ECONNREFUSED 127.0.0.1:6379
+2025-05-05 14:23:59 info: MongoDB connection SUCCESS :)
+2025-05-05 14:23:59 error: Redis connection FAIL :( connect ECONNREFUSED 127.0.0.1:6379
+2025-05-05 14:23:59 error: Redis connection FAIL :( connect ECONNREFUSED 127.0.0.1:6379
+2025-05-05 14:24:00 error: Redis connection FAIL :( connect ECONNREFUSED 127.0.0.1:6379
+2025-05-05 14:24:00 error: Redis connection FAIL :( connect ECONNREFUSED 127.0.0.1:6379
+2025-05-05 14:24:00 error: Redis connection FAIL :( connect ECONNREFUSED 127.0.0.1:6379
+2025-05-05 14:24:00 error: Redis connection FAIL :( connect ECONNREFUSED 127.0.0.1:6379
+2025-05-05 14:24:01 error: Redis connection FAIL :( connect ECONNREFUSED 127.0.0.1:6379
+2025-05-05 14:24:01 error: Redis connection FAIL :( connect ECONNREFUSED 127.0.0.1:6379
+2025-05-05 14:24:02 error: Redis connection FAIL :( connect ECONNREFUSED 127.0.0.1:6379
+2025-05-05 14:24:02 error: Redis connection FAIL :( connect ECONNREFUSED 127.0.0.1:6379
+2025-05-05 14:24:03 error: Redis connection FAIL :( connect ECONNREFUSED 127.0.0.1:6379
+2025-05-05 14:24:03 error: Redis connection FAIL :( connect ECONNREFUSED 127.0.0.1:6379
+2025-05-05 14:24:04 error: Redis connection FAIL :( connect ECONNREFUSED 127.0.0.1:6379
+2025-05-05 14:24:05 error: Redis connection FAIL :( connect ECONNREFUSED 127.0.0.1:6379
+2025-05-05 14:24:05 error: Redis connection FAIL :( connect ECONNREFUSED 127.0.0.1:6379
+2025-05-05 14:24:06 error: Redis connection FAIL :( connect ECONNREFUSED 127.0.0.1:6379
+2025-05-05 14:24:07 error: Redis connection FAIL :( connect ECONNREFUSED 127.0.0.1:6379
+2025-05-05 14:24:08 error: Redis connection FAIL :( connect ECONNREFUSED 127.0.0.1:6379
+2025-05-05 14:24:09 error: Redis connection FAIL :( connect ECONNREFUSED 127.0.0.1:6379
+2025-05-05 14:24:10 error: Redis connection FAIL :( connect ECONNREFUSED 127.0.0.1:6379
+2025-05-05 17:24:16 info: Server is running on port 3000
+2025-05-05 17:24:16 info: Redis connection SUCCESS :)
+2025-05-05 17:24:16 info: MongoDB connection SUCCESS :)
+2025-05-05 17:24:16 info: Redis test: Redis bağlantısı çalışıyor!
+2025-05-05 17:25:41 info: Server is running on port 3000
+2025-05-05 17:25:41 info: Redis connection SUCCESS :)
+2025-05-05 17:25:41 info: MongoDB connection SUCCESS :)
+2025-05-05 17:25:41 info: Redis test: Redis bağlantısı çalışıyor!
+2025-05-05 17:28:14 info: Server is running on port 3000
+2025-05-05 17:28:14 info: Redis connection SUCCESS :)
+2025-05-05 17:28:14 info: MongoDB connection SUCCESS :)
+2025-05-05 17:28:14 info: Redis test: Redis bağlantısı çalışıyor!

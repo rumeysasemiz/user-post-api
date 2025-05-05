@@ -5,6 +5,8 @@ const bcrypt = require("bcryptjs");
 const logger = require("../utils/logger");  
 const { default: mongoose } = require("mongoose");
 const { elasticClient } = require("../config/elastic_search_config");
+const redisClient = require("../config/redisClient");
+const { logoutUser } = require("../controllers/userController");
 
 const registerUser = async (username, email, password, role) => {
     try {
@@ -12,7 +14,7 @@ const registerUser = async (username, email, password, role) => {
         if (existingUser) throw new Error("This email already exists"); // eğer varsa hata fırlatıyoruz.
         const newUser = new User({ username, email, password, role }); // eğer yoksa yeni kullanıcı oluşturuyoruz.
         await newUser.save(); // yeni kullanıcıyı kaydediyoruz.
-
+         await redisClient.del('all_users'); // tüm kullanıcıları redis cache'den sil
         // elastic seache kaydetme işlemi
         await elasticClient.index({
             index: "users",
@@ -65,8 +67,17 @@ const loginUser = async (email, password) => {
 };
 const getAllUsers = async () => {
     try {
+        // önce redissten kontrol et 
+        const cachedUsers=await redisClient.get('all_users');
+        if(cachedUsers){
+            logger.info('Users fetched from Redis cache');
+            return JSON.parse(cachedUsers); // redisden gelen veriyi parse et
+        }
         // tüm kullanıcıları al daha sonra kullanıcıları döndür
         const users = await User.find({});
+        // sonuçları redis cache'e kaydet
+        await redisClient.set('all_users', JSON.stringify(users), 'EX', 3600); // 1 saat süreyle cachele
+        logger.info('Users fetched from MongoDB and cached in Redis');
         return users;
     } catch (error) {
         logger.error(`Error: ${error.message}`);
@@ -76,8 +87,17 @@ const getAllUsers = async () => {
 }
 const getUserById = async (userId) => {
     try {
+        /// önce redissten kontrol et
+        const cachedUser = await redisClient.get(`user_${userId}`);
+        if(cachedUser){
+            logger.info('User fetched from Redis cache');
+            return JSON.parse(cachedUser); // redisden gelen veriyi parse et
+        }
         const user = await User.findById(userId);
         if (!user) throw new Error("User not found");
+        // sonuçları redis cache'e kaydet
+        await redisClient.set(`user_${userId}`, JSON.stringify(user), 'EX', 3600); // 1 saat süreyle cachele
+        logger.info('User fetched from MongoDB and cached in Redis');
         return user;
     } catch (error) {
         logger.error(`Error: ${error.message}`);
@@ -125,6 +145,8 @@ const updateUser = async (userId, updateData) => {
             }
         });
         logger.info(`User updated in MongoDB and Elasticsearch: ${userId}`);
+        await redisClient.del(`user_${userId}`); // güncellenen kullanıcıyı redis cache'den sil	
+        await redisClient.del('all_users'); // tüm kullanıcıları redis cache'den sil
 
         return updatedUser;
     } catch (error) {
@@ -159,7 +181,8 @@ const deleteUser = async (userId) => {
     })
 ]);
 logger.info(`User and related data deleted from MongoDB and Elasticsearch: ${userId}`);
-
+await redisClient.del(`user_${userId}`); // silinen kullanıcıyı redis cache'den sil
+await redisClient.del('all_users'); // tüm kullanıcıları redis cache'den sil
         return {
             user: user,
             deletedPostsCount: deletedPosts.deletedCount
@@ -194,12 +217,15 @@ const searchUsers = async (query) => {
     }
 };
 
+
 module.exports = {
     registerUser,
     loginUser,
+    logoutUser,
     getAllUsers,
     getUserById,
     updateUser,
     deleteUser,
     searchUsers
-}
+    
+};
